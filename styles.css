@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --background: rgb(24, 25, 26);
+    --background-secondary: rgb(36, 37, 38);
+    --background-tertiary: rgb(57, 58, 59);
+    
+    --highlight: rgb(110, 108, 232);
+    
+    --label: rgb(228, 230, 235);
+    --label-secondary: rgb(153, 153, 153);
+}
+
+body {
+    color: var(--label);
+}
+
+h1 {
+    font-family: 'Inter', sans-serif;
+    line-height: 145%;
+    font-weight: 600;
+    font-size: 27px;
+    letter-spacing: -0.021em;
+    margin: 1rem 0 0.5rem 0;
+}
+
+h2 {
+    font-family: 'Inter', sans-serif;
+    line-height: 145%;
+    font-weight: 400;
+    font-size: 24px;
+    letter-spacing: -0.019em;
+    margin: 1rem 0 0.5rem 0;
+}
+
+.sub-title {
+    font-family: 'Inter', sans-serif;
+    line-height: 145%;
+    font-weight: 300;
+    font-size: 22px;
+    letter-spacing: -0.018em;
+}
+
+.pre-title {
+    font-family: 'Inter', sans-serif;
+    line-height: 145%;
+    font-weight: 600;
+    font-size: 11px;
+    letter-spacing: 0.005em;
+    text-transform: uppercase;
+    color: var(--label-secondary);
+    margin-bottom: -1rem;
+}
+
+p {
+    font-family: 'Inter', sans-serif;
+    line-height: 145%;
+    font-weight: 350;
+    font-size: 17px;
+    letter-spacing: -0.013em;
+    margin: 1rem 0 2rem 0;
+}
+
+a {
+    color: var(--label);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--highlight);
+}
+
+
+body {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "content"
+    "footer";
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+}
+
+html {
+    background-color: var(--background);
+}
+
+header {
+    grid-area: header;
+    background-color: var(--background-secondary);
+    border-bottom: var(--background-tertiary) 1px solid;
+}
+
+nav {
+    display: grid;
+}
+
+.navbar {
+    display: grid;
+    grid-template-areas:
+    "navlogo navmenu";
+    padding: 0 1rem;
+    height: 50px;
+    align-content: center;
+}
+
+.logo {
+    grid-area: navlogo;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    letter-spacing: -0.014em;
+    font-weight: 800;
+    align-content: center;
+}
+
+.toggles {
+    display: grid;
+    grid-column-gap: 10px;
+    grid-area: navmenu;
+    justify-content: right;
+    justify-items: right;
+    grid-auto-flow: column;
+}
+
+.icon-button {
+    height: 24px;
+    width: 24px;
+}
+
+#mobile-menu {
+    position: absolute;
+    display: none;
+    grid-auto-flow: row;
+    grid-row-gap: 1rem;
+    background-color: var(--background-secondary);
+    border-bottom: var(--background-tertiary) 1px solid;
+    border-top: var(--background-tertiary) 1px solid;
+    width: 100%;
+    z-index: 100;
+    font-family: 'Inter', sans-serif;
+    padding: 1rem;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: -0.006em;
+    text-transform: uppercase;
+}
+
+#content {
+    grid-area: content;
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.avatar-container {
+    margin-top: -25px;
+    margin-bottom: -25px;
+    left: 50%;
+    position: absolute;
+}
+
+.avatar-circle {
+    height: 50px;
+    width: 50px;
+    margin-left: -25px;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 0px 5px;
+    border-radius: 50%;
+}
+
+.avatar {
+    border-radius: 50%;
+}
+
+footer {
+    @include footer-text;
+    display: grid;
+    grid-area: footer;
+    background-color: var(--background-secondary);
+    border-top: var(--background-tertiary) 1px solid;
+    justify-content: center;
+    padding: 1rem 0;
+}
+
+.site-title {
+    display: grid;
+    justify-content: center;
+}
+
+.site-subtitle {
+    display: grid;
+    justify-content: center;
+    text-transform: uppercase;
+    border-top: 3px solid var(--highlight);
+    padding-top: .5rem;
+    padding-bottom: 2rem;
+    width: 150px;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+blockquote {
+    display: block;
+    padding: 5px 0 5px 15px;
+    margin: 0 0 1rem;
+    line-height: 1.6;
+    border-left: 5px solid var(--highlight);
+}
+
+blockquote p {
+    margin: 0 0 0.5rem 0;
+}
+
+div.highlight pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    padding: 0.5rem;
+    border: 1px solid var(--background-secondary);
+    border-radius: 3px;
+}
+
+.post-read-more {
+    display: grid;
+    justify-content: right;
+    margin-top: -1.5rem;
+}
+
+p a {
+    color: var(--highlight);
+}
