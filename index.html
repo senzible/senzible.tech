@@ -26,25 +26,20 @@
     <meta name="theme-color" content="#ffffff">
 
     <style>
-        grid-container {
+        .container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            grid-gap: 50px;
+            place-items: center;
+            height: 100vh;
         }
 
         #logo {
-            grid-column: 2;
-            display: grid; /* new */
-            align-items: center; /* new */
-            justify-items: center; /* new */
-            width: 100%;
-            margin: auto;
+            width: 70%;
         }
     </style>
 </head>
 <body>
-<grid-container>
+<div class="container">
     <img id="logo" src="images/logo-black-color.svg"/>
-</grid-container>
+</div>
 </body>
 </html>
